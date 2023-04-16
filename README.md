@@ -1,0 +1,17 @@
+# Final-Project-
+The purpose of this project is to analyze different aspects of Diabetes in the Pima tribe by doing Exploratory Data Analysis in order to come up with an machine learning model to predict the outcome  either non diabetic or diabetic.
+I first imported the various libraries which helped me perform the business analytics: numpy, pandas, seaborn, matplotlib as well as sklearn for the various model analyses
+I imported the dataset as a csv file name diabetes
+I showed an overview of the first 5 and last records to have a general view of the records and their values
+By looking at the dimension of the dataset, I discovered that there were 1000 observations and 9 features making an overall size of 9000.
+Most of the features are integer based except 'BMI' and 'DiabetesPedigreeFunction' which are in float
+The dataset has no missing values so there was no need of dropping any
+The statistical measures of the variable 'Age'showed a mean of 33.83 and a median of 30 with the youngest person aged 21 while the oldest was 81
+By plotting the variable 'BloodPressure', it was found that the distribution was approximately normal, with a peak around 70-80
+The mean, median and mode of the 'BMI' variable were 32.66, 32.8 and 32 respectively. These values are not equal. The mean and median are relatively close together, but the mode is lower than both of them. This suggests that the distribution may be slightly skewed to the right, with more individuals having higher BMI values than lower ones.
+The pair plot gave useful information. The 'Glucose' variable seems to be positively correlated with the 'Outcome' variable because there are more orange points at higher 'Glucose' values.
+The 'SkinThickness' variable does not appear to be strongly associated with the 'Outcome' variable because the orange and blue points scattered throughout the range of 'SkinThickness' values.
+The 'DiabetesPedigreeFunction' variable also does not appear to be strongly associated with the 'Outcome' variable, although there may be a slight trend towards higher values of 'DiabetesPedigreeFunction' for individuals with diabetes. Also notice some outliers where there are a few individuals with very high values that are far away from the other points.
+By plotting the scatter plot between 'Glucose' and 'Insulin', there seems to be a positive correlation between the 'Glucose' and 'Insulin' variables; the higher the 'Glucose' values, the higher the 'Insulin' values. However,  many points scattered throughout the plot that do not appear to follow this trend.There are also few outliers in the data, particularly at high 'Insulin' values that are far away from the other points.There is an outlier around age 81
+The correlation matrix showed a strong positive correlation between 'Pregnancies' and 'Age'; Also between 'Insulin','BMI' and 'SkinThickness'. There is also a positive correlation between 'Insulin' and 'Glucose' as well as between 'DiabetesPedigreeFunction'and 'SkinThickness'.'Pregnancies','BloodPressure','Age' have no correlation with 'DiabetesPedigreeFunction'.
+I applied modeling using Logistic Regression first and then Random Forest. Amongst both models, the Random Forest model performed better than the logistic regression model, based on accuracy. The Random Forest model achieved an accuracy of 0.77 on the test set, compared to the logistic regression model's accuracy of 0.75 on the test set.
